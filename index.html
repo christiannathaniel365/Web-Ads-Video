@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AdPreview – Preview iklan YouTube</title>
+    <meta
+      name="description"
+      content="Tempel link YouTube, langsung lihat thumbnail, judul, player, dan credit videonya."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true">
+      <span class="blob b1"></span><span class="blob b2"></span
+      ><span class="blob b3"></span>
+    </div>
+
+    <header class="top">
+      <a class="brand" href="#">
+        <span class="logo"
+          ><svg viewBox="0 0 24 24" width="16" height="16" fill="#fff">
+            <path
+              d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"
+            />
+          </svg>
+        </span>
+        AdPreview
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Lihat preview iklan YouTube, cukup tempel linknya.</h1>
+        <p class="sub">
+          Thumbnail, judul, player, dan credit video tampil rapi dalam satu
+          kartu.
+        </p>
+        <p id="error" class="error" role="alert" hidden></p>
+      </section>
+
+      <section id="result" class="result" hidden aria-live="polite">
+        <div id="skeleton" class="card skeleton" hidden>
+          <div class="sk-player"></div>
+          <div class="sk-side"><i></i><i></i><i></i></div>
+        </div>
+
+        <article id="card" class="card" hidden>
+          <div class="player-wrap"><div id="player" class="player"></div></div>
+          <div class="side">
+            <img id="thumb" class="thumb" alt="Thumbnail video" />
+            <h2 id="title" class="title"></h2>
+            <a id="channel" class="channel" target="_blank" rel="noopener"></a>
+            <a id="open" class="open" target="_blank" rel="noopener"
+              >Buka di YouTube</a
+            >
+          </div>
+          <div class="credit">
+            <h3>Credit video</h3>
+            <dl id="credit"></dl>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>Dibuat oleh Christian, Evan &amp; Samuel</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
